@@ -2,6 +2,7 @@
 import { remove } from '@/Redux/Cartslice'
 import { useDispatch, useSelector } from 'react-redux'
 import { HiOutlineTrash } from "react-icons/hi";
+import Image from 'next/image';
 
 
 
@@ -29,8 +30,8 @@ export default function Cart(){
       {
         cartitems.map((item)=>(
         
-                <div className='flex   justify-around items-center shadow py-3'>
-                <img src={item.image} alt='' className='w-28 h-28 '/>
+                <div key={item.id} className='flex   justify-around items-center shadow py-3'>
+                <Image src={item.image} alt='' width={128} height={128} className='object-cover'/>
                 <h5>{item.title}</h5>
                 <h5>₹{item.price}</h5>
                 

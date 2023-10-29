@@ -222,7 +222,7 @@ export default function Home() {
       <div className='grid grid-cols-1 gap-[15px] md:grid-cols-2 xl:grid-cols-4 xl:gap-[30px] py-12 px-2'>
         {
           filteredProducts.map((products)=>{
-            return <Product products={products}/>
+            return <Product key={products.id} products={products}/>
           })
         }
       </div>
